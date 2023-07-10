@@ -1,0 +1,303 @@
+.product-cart-view-modal{
+    .modal{
+        &-dialog{
+            max-width: 1180px;
+
+            @include respond-between(md, lg) {
+                max-width: 942px;
+  
+            }
+            @include respond-between(sm, md) {
+                max-width: 720px;
+              
+            }
+            @include respond-between(xs, sm) {
+                max-width: 540px;
+              
+            }
+            @include respond-below(xs) {
+                max-width: none;
+              
+            }
+        }
+        &-content{
+            border: none;
+        }
+        &-body{
+            padding: 16px;
+
+            .close-btn{
+              
+   
+                button{
+                    background-color: $white-bg;
+                    margin: 0;
+                    @include texts(25,25);
+                    color: $black-color;
+                    opacity: .5;
+                    transition: all .3s ease-in-out;
+                    @include area(60, 60);
+                    border: 1px solid $view-border;
+                    border-radius: 0 0 60px 0;
+
+                    i{
+                        top: -5px;
+                        left: -5px;
+                    }
+                }
+                &:hover{
+                    button{
+                        opacity: .75;
+                    }
+                }
+            }
+            .product__view{
+                &__info{
+                    padding: 25px 0;
+
+                    @include respond-below(xs){
+                        padding: 10px 0;
+                    }
+
+                    
+                }
+                &__title{
+                    h2{
+                        @include fonts(32, 500, $template-color, inherit, 40px);
+                        letter-spacing: -.48px;
+                        margin-bottom: 20px;
+
+                        @include respond-below(lg){
+                            font-size: 24px;
+                            margin-bottom: 10px;
+                        }
+                        @include respond-below(xs){
+                            @include texts (20, 25);
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+     
+                &__ratting{
+
+                    .ratting-icon{
+                        i{
+                            @include texts (16.5,20);
+                            color: $ratting-color;
+                            letter-spacing: 2px;
+
+                            @include respond-below(lg){
+                                @include texts(12.5, 16);
+                            }
+                        }
+                        &.off-ratting{
+                            i{
+                                color: $off-ratting;
+                            }
+                        }
+                    }
+                }
+                &__status{
+                    a{
+                        line-height: 14px;
+                        color: $medium_light-color;
+                        transition: all .3s ease-in-out;
+                        margin-left: 10px;
+                        &:hover{
+                            color: $main-color;
+                        }
+                    }
+                }
+                &__price{
+                    padding-top: 17px;
+                    margin: 20px 0;
+                    border-top: 1px solid $minicart-border;
+                    @include respond-below(xs) {
+                        margin: 13px 0;
+                        padding-top: 14px;
+                    }
+                    span{
+                        @include texts(18, 22);
+                        font-weight: 500;
+
+                        @include respond-below(xs) {
+                            font-size: 16px;
+                            margin: 13px 0;
+                            padding-top: 14px;
+                        }
+                    }
+                }
+                &__disc{
+                    p{
+                        line-height: 25px;
+                        color: $medium_light-color;
+
+                        @include respond-below(xs) {
+                            @include texts(15, 21);
+                        }
+                    }
+                }
+                &__select-color{
+                    margin: 20px 0 30px;
+
+                    @include respond-below(xs) {
+                        margin: 14px 0 18px;
+  
+                    }
+                    label{
+                        @include texts(16, 27);
+                        font-weight: 500;
+                        margin-bottom: 8px;
+
+                        @include respond-below(xs) {
+                            margin-bottom: 4px;
+                        }
+                    }
+                    .form-select{
+                        @include texts(13, 20);
+                        max-width: 285px;
+                        height: 41px;
+                        padding: 0 5px 0 15px;
+                        border: 2px solid $minicart-border;
+                        border-radius: 4px;
+
+                        &:focus{
+                            box-shadow: none;
+                            border-color: $template-color;
+                        }
+                    }
+                }
+
+                &__quantity-cart__box{
+                    
+                    .input-group{
+                        width: 105px;
+                        @include respond-below(xs) {
+                            width: 70px;
+
+                        }
+                        &-field{
+                            input{
+                                line-height: 27px;
+                                color: $quante-color;
+                                padding: 5px 26px 5px 5px;
+                                border: 2px solid $minicart-border;
+                                border-radius: 4px
+                            }
+                        }
+                        &-btn{
+                            button{
+                                span{
+                                    @include texts(12,21);
+                                    font-weight: 600;
+                                    color: $quante-color;
+                                    min-width: 25px;
+                                    transition: all .3s ease-in-out;
+                                    border: 1px solid $minicart-border;
+                                    display: inline-block;
+                                    height: 21px;
+
+     
+                                    &:hover{
+                                        background-color: $button-bg;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .add-cart-btn{
+                        a.btn-theme{
+                            padding: 14px 81px;
+                            margin-left: 10px;
+
+                            @include respond-below(xs) {
+                                padding: 12px 25px;
+
+                            }
+                            &:hover{
+                                color: $white-color;
+                                border-color: $template-color;
+                            }
+                        }
+                    }
+                }
+                &__wish-compare__wrap{
+                    margin-top: 16px;
+                    a{
+                        @include texts(14, 25);
+                        color: $medium_light-color;
+ 
+                    }
+                    .icon{
+                        i{
+                            @include texts(18, 25);
+                            color: $medium_light-color;
+                            margin-right: 5px;
+                            transition: all .3s ease-in-out;
+
+                   
+                        }
+                    }
+                    .compare-link{
+                        margin-left: 36px;
+                    }
+
+                    div{
+                        &:hover{
+                            a{
+                                color: $main-color;
+
+                            }
+                            .icon{
+                                i{
+                                    color: $main-color;
+
+                                }
+                            }
+                        }
+                    }
+                }
+                &__social__wrap{
+                    padding-top: 20px;
+                    margin-top: 20px;
+                    border-top: 1px solid $minicart-border;
+
+                    @include respond-below(xs){
+                        padding-top: 14px;
+                        margin-top: 14px;
+                    }
+                    .social-title{
+                        h4{
+                            font-size: 22px;
+                            margin-bottom: 8px !important;
+
+                            @include respond-below(xs){
+                                font-size: 18;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .social-box{
+                        @include respond-below(xs){
+                           text-align: center;
+                        }
+                        a.social-link{
+                            margin-left: 15px;
+                            i{
+                                font-weight: 400;
+                                @include texts(14,14);
+                                color: $medium_light-color;
+                                transition: all .3s ease-in-out;
+                            }
+                            &:hover{
+                                i{
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

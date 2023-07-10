@@ -1,0 +1,77 @@
+.product-top-area{
+    .product{
+        &__inner{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        &__thumb{
+          flex-basis: 48%;
+
+          @include respond-below(md){
+            flex-basis: 43.35%;
+
+          }
+          @include respond-below(sm){
+            flex-basis: 22.35%;
+
+          }
+          
+          @include respond-below(xs){
+            flex-basis: 48%;
+
+          }
+        }
+        &__content{
+          flex-basis: 52%;
+          padding-left: 12px;
+
+        }
+        &__item{
+          padding: 20px 30px;
+          min-height: 187px;
+          margin-bottom: 0;
+          @include respond-below(md){
+            min-height: 155px;
+            padding: 15px 30px;
+
+          }
+          @include respond-below(xs){
+            min-height: 140px;
+            padding: 20px 30px;
+
+          }
+        }
+
+ 
+        &__info{
+            padding-top: 10px;
+
+          @include respond-below(lg){
+          }
+        }
+        &__cart{
+          @include respond-below(lg){
+          }
+        }
+        &__title{
+            h3{
+                @include texts(14, 18);
+            }
+        }
+        &__ratting{
+            .ratting-icon{
+                line-height: 12px;
+                i{
+                     @include texts(10, 12);
+                    margin-right: 5px;
+                }
+            }
+        }
+        &__price{
+            span.price{
+                font-weight: 500;
+            }
+        }
+    }
+}

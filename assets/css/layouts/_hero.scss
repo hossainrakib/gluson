@@ -1,0 +1,177 @@
+.hero-area{
+    margin-top: 30px;
+    .hero{
+        &__item{
+            background-position: top left;
+        }
+        &__contener{
+            height: 583px;
+            
+            @include respond-below(lg){
+                height: 460px;
+            }
+            @include respond-below(md){
+                height: 400px;
+            }
+
+        }
+        &__title{
+            h2{
+                @include fonts(50, 500, $template-color, uppercase, 60px);
+
+                @include respond-below(lg){
+                    font-size: 40px
+                }
+                @include respond-below(md){
+                    font-size: 34px
+
+                }
+                @include respond-below(xs){
+                    font-size: 23px
+                }
+            }
+            &__sub{
+                h2{
+                    @include fonts(50, 300, $medium_dark-color, uppercase, 50px);
+                    @include respond-below(lg){
+                        font-size: 40px
+                    }
+                    @include respond-below(md){
+                        @include texts(30, 30);
+                    }
+                    @include respond-below(xs){
+                        @include texts(20, 20);
+
+                    }
+                }
+            }
+        }
+        &__disc{
+            p{
+                @include fonts(20, 400, $medium_dark-color, capitalize, 28px);
+                margin: 12px 0 35px;
+                @include respond-below(lg){
+                    margin: 12px 0 25px;
+
+                }
+                @include respond-below(md){
+                    font-size: 16px;
+                    margin: 0 0 18px 0;
+                }
+                @include respond-below(xs){
+                    @include texts(14, 20); 
+                    margin: 0 0 10px 0;
+
+                }
+                
+            }
+        }
+        &__link{
+                        
+            &-group{
+            }
+            @at-root{
+                @at-root{
+                    .btn-theme{
+                        @include fonts(13, 700, $white-color, uppercase, 13px);
+                        background-color: $button-bg;
+                        transition: all .3s ease-in-out;
+                        padding: 18px 36px;
+                        border-radius: 3px;
+                        border: 2px solid $main-color;
+                        &:hover{
+                            background-color: $button-hover-bg;
+                        }
+                    }
+                    
+                    .btn-border{
+                        background-color: transparent;
+                        color: $main-color;
+                        border-color: $light-gray;
+                        margin-left: 10px;
+
+                        @include respond-below(xs){
+                            display: none;
+                        }
+                        &:hover{
+                            background-color: $button-bg;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @at-root{
+        .swiper-btn{
+            &::after{
+                display: none;
+            }
+        }
+    }
+    .swiper-btn{
+        
+        position: absolute;
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        @include area(60, 60);
+        background-color: $white-bg;
+        border-radius: 0;
+        border-width: 0px;
+        i{
+            font-size: 22px;
+            color: $black-color;
+            font-weight: 400;
+            transition: all .3s ease-in-out;
+        }
+        &:hover{
+            i{
+                transform: scale(1.3);
+            }
+        }
+        &.swiper-button-disabled{
+            opacity: .6;
+        }
+        &.swiper-button-prev{
+            left: 20px !important;
+            transform: translate(0%, -50%) !important;
+
+        }
+        &.swiper-button-next{
+            transform: translate(0%, 0%) !important;
+            right: 20px !important;
+        }
+    
+    }
+    .swiper-pagination-bullet{
+        @include area(12,12);
+        margin: 0 6px;
+        background-color: transparent;
+        position: relative;
+        opacity: 1;
+        border-radius: 50%;
+        transition: all .3s ease-in-out;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            background-color: $light-gray-bg;
+            box-shadow: 0 0 0 2px transparent;
+        }
+        &-active{
+            background-color: transparent;
+            box-shadow: 0 0 0 2px $button-bg; 
+            &::before{
+                transform: scale(.4);
+                background-color: $button-bg;
+                 box-shadow: 0 0 0 2px $button-bg; 
+
+            }
+        }
+    }
+}

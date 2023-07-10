@@ -1,0 +1,222 @@
+.footer-area{
+    color: $medium_light-color;
+    background-color: $footer-bg;
+    .footer{
+        &__disc{
+            p{
+                margin-bottom: 30px;
+            }
+        }
+        &__copy-right{
+            .copy-right{
+                &__wrap{
+                    padding: 34px 0;
+                }
+                &__disc{
+                    @include respond-below(sm){
+                        margin-top: 20px;
+                    }
+                    p{
+                        line-height: 24px;
+                        a{
+                            font-weight: 500;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .widget{
+        &__item{
+            @include respond-below(sm){
+                padding-bottom: 20px;
+            }
+        }
+        &__logo{
+            margin-bottom: 28px;
+  
+        }
+        &__title{
+            h4{
+                color: $white-color;
+                margin-bottom: 26px !important;
+
+                @include respond-below(sm){
+                    @include texts(15, 58);
+                    padding: 0 20px;
+                    border: 1px solid $footer-border;
+                    margin-bottom: 0px !important;
+
+                    position: relative;
+                    
+                    &::before{
+                        position: absolute;
+                        height: 100%;
+                        width: 60px;
+                        line-height: 60px;
+                        text-align: center;
+                        top: 0;
+                        right: 0;
+                        content: '\f0d7';
+                        font-size: 15px;
+                        font-weight: 900;
+                        font-family: "Font Awesome 5 Free";
+                        transition: all  .3s ease-in-out;
+                    }
+                    &.active{
+                        &::before{
+                            content: '\f0d8';
+
+                        }
+                    }
+                }
+            }
+        }
+        &__body{
+            @include respond-below(sm){
+                padding: 25px;
+                border: 1px solid $footer-border;
+                display: none;
+            }
+        }
+        &__content{
+            li{
+                margin-bottom: 3px !important;
+
+            }
+            .title{
+                h2{
+                    color: $white-color;
+                    font-weight: 500;
+                    margin-right: 5px !important;
+                }
+            }
+        }
+        &__socail{
+            margin-top: 34px;
+
+            @include respond-below(sm){
+                margin-bottom: 40px;
+                margin-top: 0;
+            }
+            .socail__icon{
+                @include area(40, 40);
+                border-radius: 50%;
+                margin-right: 10px;
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    color: $white-color;
+                    font-size: 16px;
+                }
+            }
+        }
+        &__menu{
+            .item{
+                a.link{
+                    color: $medium_light-color;
+                    line-height: 30px;
+                    padding: 3px 0;
+                    transition: all .3s ease-in-out;
+
+                    &:hover{
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+    .newsletter{
+        &__wrap{
+            padding: 40px 0 45px;
+            border-top: 1px solid $newsletter-border;
+            border-bottom: 1px solid $newsletter-border;
+        }
+        &__content{
+            margin-right: 45px;
+            @include respond-below(md){
+                margin-right: 20px;
+            }
+            @include respond-below(xs){
+                margin-right: 0px;
+                margin-bottom: 10px;
+            }
+        }
+        &__title{
+            h4{
+                @include texts(24, 29);
+                color: $white-color;
+                letter-spacing: -.48px;
+                margin-bottom: 10px !important;
+
+                @include respond-below(lg){
+                    font-size: 20px;
+                }
+            }
+            &__sub{
+                h5{
+                   font-style: italic;
+                   span{
+                       font-weight: 700;
+                       color: $off-color;
+                   }
+                }
+            }
+        }
+        &__info{
+            p{
+                font-weight: 500;
+                line-height: 30px;
+
+                @include respond-below(lg){
+                    font-size: 12px;
+                }
+            }
+        }
+        &__form{
+            .input-group{
+                margin-top: 8px;
+
+                @include respond-below(md){
+                    margin-top: 28px;
+                }
+                .form-control, &::placeholder{
+                    @include texts(13, 22);
+                    padding: 12px 20px;
+                    background-color: transparent;
+                    color: $news-placeholder;
+                    border: 2px solid $news-border;
+                    border-radius: 5px !important;
+                    &::placeholder{
+
+                    }
+                    &:focus{
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+                .btn{
+                    @include texts(13, 50);
+                    color: $white-color;
+                    padding: 0 18px;
+                    background-color: $button-bg;
+                    font-weight: 500;
+                    transition: all .3s ease-in-out;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    &:hover{
+                        opacity: .8;
+                    }
+                    &:focus{
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+  
+    }
+}

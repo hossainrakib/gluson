@@ -1,0 +1,61 @@
+.product-shop-area{
+    .container{
+        padding: 0 15px !important;
+
+        .row{
+            margin:  0 -15px!important;
+        }
+        .row > [class*=col-]{
+            padding:  0 15px!important;
+            
+        }
+    }
+    .shop{
+        &__wrapper{
+
+            &:hover{
+                .shop__thumb{
+                    img{
+                        transform: scale(1.03);
+                    }
+                }
+            }
+        }
+        &__inner{
+            border-radius: 4px;
+        }
+        &__thumb{
+            @include respond-between(xs, sm) {
+                max-height: 240px;
+            }
+            @include respond-below(xs) {
+                max-height: 200px;
+              
+            }
+            img{
+                transition: all .3s ease-in-out;
+            }
+        }
+        &__content{
+            bottom: 27px;
+            left: 25px;
+        }
+        &__title{
+            h2{
+                @include texts(16, 17);
+                margin-bottom: 3px;
+            }
+        }
+        &__link{
+            color: $button-bg;
+
+            a{
+                color: $medium_light-color;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    color: $button-bg;
+                }
+            }
+        }
+    }
+}

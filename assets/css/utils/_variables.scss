@@ -1,0 +1,314 @@
+//text-color
+$template-color:#242424;
+$main-color:#0163d2;
+$medium_dark-color:#666;
+$medium_light-color:#999;
+$white-color:#fff;
+$black-color:#000;
+$light-color:#f2f2f2;
+$dark-color:#323232;
+$gold-color:#ffde25;
+$green-color:#5bb300;
+//ratting-color
+$ratting-color:#f9ba48;
+$off-ratting:#e1e1e1;
+//backgroutd-color
+
+$theme-bg:#f5f5f5;
+$theme-main-bg:#f5f5f5;
+$button-bg:#0163d2;
+$button-hover-bg:#242424;
+$card-bg:#f1f1f1;
+$white-bg:#fff;
+$footer-bg:#383838;
+//dots bg
+$light-gray-bg:#c7c7c7;
+//off discaount footer 
+$off-color:#f26522;
+
+// mobile menu
+$mobile-bg:#1f1f1f;
+$thamble-bg:#0163d2;
+$thamble-hover-bg:#2f2f2f;
+
+//mobile border
+$mobile-border:rgba(255, 255, 255, 0.11);
+//vertical menu border
+$vmenu-border:#e5e5e5;
+$vmenu2-border:#ebebeb;
+$vlist-hover:#f3f3f3;
+$vmenu-shadow: rgba(0, 0, 0, 0.10);
+//placeholder color
+$placeholder-color:#9e9e9e;
+//newsletter-placeholder
+$news-placeholder:#888;
+$news-border:#606060;
+//minicart border
+$minicart-border:#e5e5e5;
+//tob border
+$tab-border:#e3e3e3;
+//view-bg
+$view-color:#f1f1f1;
+$view-eye:#949494;
+
+//box-shadow
+$box-shadow: rgba(0, 0, 0, .10);
+//hero link border
+$light-gray:#dcdcdc;
+//veiw-border
+$view-border:#8c8c8c;
+//quantity-text
+$quante-color:#3e444a;
+//categories sub title
+$cs-color:#616161;
+//old price color
+$old-price-color:#a4a4a4;
+
+//cta-border
+$cta-border:#3482db;
+
+//footer border
+$footer-border:#515151;
+
+//newsletter-border
+$newsletter-border:rgba(255, 255, 255, 0.07);
+//section-padding
+
+.section-padding{
+    padding: 70px 0px 40px;
+
+    @include respond-between(md, lg) {
+         padding: 60px 0 40px;
+    }
+    @include respond-between(sm, md) {
+         padding: 50px 0 35px;
+    }
+    @include respond-between(xs, sm) {
+         padding: 40px 0 30px;
+    }
+    @include respond-below(xs) {
+          padding: 30px 0 30px;
+    }
+
+}
+.speace-b40{
+    padding-bottom: 40px;
+}
+.speace-b30{
+    padding-bottom: 30px;
+}
+.speace-t-70 {
+    padding-top: 70px;
+
+    @include respond-between(md, lg) {
+        padding-top: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 30px;
+    }
+    @include respond-below(xs) {
+        padding-top: 26px;
+    }
+}
+.speace-b-70 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 26px;
+    }
+}
+.speace-t-60 {
+    padding-top: 60px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-b-60 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+.speace-t-50 {
+    padding-top: 50px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+.speace-b-50 {
+    padding-bottom: 50px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+
+.speace-t-40 {
+    padding-top: 40px;
+
+    @include respond-between(md, lg) {
+        padding-top: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 25px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-t-30 {
+    padding-top: 30px;
+
+    @include respond-between(md, lg) {
+        padding-top: 25px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 20px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 18px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+//bg-size
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+
+//html&body
+html, body{
+    height: 100%;
+    width: 100%;
+}
+//button
+.btn{
+
+}
+.button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 0;
+}
+//body style
+body{
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $template-color;
+}
+//theme-main-bg
+.theme-bg{
+    background-color: $theme-main-bg;
+}
+//all heading tag
+$list-font:(h1, 50, 60, 500),(h2, 14, 24, 400),(h3, 16, 20, 400),(h4, 18, 22, 500),(h5, 14, 14, 400);
+
+@each $name, $font-size, $line-height, $font-weight in $list-font {
+    #{$name} {
+        @include texts($font-size, $line-height);
+        font-weight:$font-weight;
+    }
+}
+
+//background social
+$social-bg:(facebook, #3c5b9b),(twitter, rgb(64, 193, 223)),(instragram, rgb(198, 25, 184)),(linkedin, rgb(237, 60, 50)),(rss, rgb(235, 131, 20));
+
+@each $bg-color, $color in $social-bg {
+    .#{$bg-color}{
+        background-color: $color;
+    }
+}
+//transition effect
+.transition{
+    transition: all .3s ease-out;
+
+    &:hover{
+        color: $main-color !important;
+    }
+}
+.ttion{
+    transition: all .3s ease-out;
+}
+.container{
+
+    @include respond-above(lg) {
+      max-width: 1200px;
+    }
+    @include respond-between(md, lg) {
+        max-width: 960px;
+  
+    }
+    @include respond-between(sm, md) {
+        max-width: 720px;
+      
+    }
+    @include respond-between(xs, sm) {
+        max-width: 540px;
+      
+    }
+
+}
